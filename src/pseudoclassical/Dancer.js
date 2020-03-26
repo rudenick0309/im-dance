@@ -21,11 +21,11 @@ function Dancer(top, left, timeBetweenSteps) {
   this.$node = createDancerElement();
 }
 
-Dancer.prototype.step = () => {
+Dancer.prototype.step = function() {
   setTimeout(this.dancers.step, this.timeBetweenSteps);
 };
 
-Dancer.prototype.setPosition = (top, left) => {
+Dancer.prototype.setPosition = function(top, left) {
   // console.log('Dancer의 this : ' + this.$node);
   Object.assign(this.$node.style, {
     top: `${top}px`,
