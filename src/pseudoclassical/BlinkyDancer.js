@@ -4,9 +4,9 @@ if (typeof window === 'undefined') {
 
 // blinkyDancer를 pseudoclassical한 방식으로 리팩토링하세요
 // 참고로, constructor는 대문자로 이름을 시작하는 것이 관례입니다
-function BlinkyDancer() {
+function BlinkyDancer(top, left, timeBetweenSteps) {
   // your code here
-  Dancer.apply(this, arguments);
+  Dancer.apply(this, [top, left, timeBetweenSteps]);
 }
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.consturctor = BlinkyDancer;
