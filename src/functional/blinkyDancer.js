@@ -1,5 +1,5 @@
-if (typeof window === 'undefined') {
-  var makeDancer = require('./dancer');
+if (typeof window === "undefined") {
+  var makeDancer = require("./dancer");
 } // you don't have to worry about this code. this is for testing.
 
 var makeBlinkyDancer = (top, left, timeBetweenSteps) => {
@@ -13,15 +13,14 @@ var makeBlinkyDancer = (top, left, timeBetweenSteps) => {
   blinkyDancer.step = () => {
     // call the old version of step at the beginning of any call to this new version of step
     oldStep();
-
-    let style = blinkyDancer.$node.style;
-    style.display = style.display === 'none' ? 'inline-block' : 'none';
+    // let style = blinkyDancer.$node.style;
+    // style.display = style.display === "none" ? "inline-block" : "none";
   };
 
   return blinkyDancer;
 };
 
 // you don't have to worry about this code. this is for testing.
-if (typeof window === 'undefined') {
+if (typeof window === "undefined") {
   module.exports = makeBlinkyDancer;
 }
