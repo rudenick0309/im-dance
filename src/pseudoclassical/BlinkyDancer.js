@@ -12,8 +12,8 @@ BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.consturctor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  let style = this.$node.style;
   Dancer.prototype.step();
+  let style = this.$node.style;
   style.display = style.display === 'none' ? 'inline-block' : 'none';
 };
 

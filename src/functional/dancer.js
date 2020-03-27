@@ -1,7 +1,7 @@
 if (typeof window === 'undefined') {
   var jsdom = require('jsdom');
   var { JSDOM } = jsdom;
-  var { document } = (new JSDOM('')).window;
+  var { document } = new JSDOM('').window;
 } // you don't have to worry about this code. this is for testing.
 
 // Creates and returns a new dancer object that can step
