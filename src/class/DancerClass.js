@@ -22,13 +22,13 @@ class DancerClass {
     this.$node = createDancerElement();
 
     this.step();
-    this.setPostion(top, left);
+    this.setPosition(top, left);
   }
 
   step() {
     setTimeout(this.step.bind(this), this.timeBetweenSteps);
   }
-  setPostion(top, left) {
+  setPosition(top, left) {
     Object.assign(this.$node.style, {
       top: `${top}px`,
       left: `${left}px`
