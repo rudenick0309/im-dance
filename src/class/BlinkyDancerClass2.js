@@ -5,7 +5,7 @@ if (typeof window === "undefined") {
 
 // blinkyDancer를 class 키워드를 써서 ES6 방식으로 리팩토링하세요
 // 여기에는 Pseudoclassical에서 정의된 BlinkyDancer와 이름이 겹치므로, BlinkyDancerClass라는 이름을 사용합니다.
-class BlinkyDancerClass extends DancerClass {
+class BlinkyDancerClass2 extends DancerClass {
   // your code here
   constructor(top, left, timeBetweenSteps) {
     super(top, left, timeBetweenSteps);
@@ -13,16 +13,12 @@ class BlinkyDancerClass extends DancerClass {
 
   step() {
     super.step();
-    let style = this.$node.style;
+    // let style = this.$node.style;
     // style.display = style.display === "none" ? "inline-block" : "none";
-    //2. 랜덤 컬러 스타일을 적용
-    style.backgroundColor =
-      "#" + parseInt(Math.random() * 0xffffff).toString(16);
-    super.setPosition(this.top + 1, this.left + 1);
   }
 }
 
 // you don't have to worry about this code. this is for testing.
 if (typeof window === "undefined") {
-  module.exports = BlinkyDancerClass;
+  module.exports = BlinkyDancerClass2;
 }
