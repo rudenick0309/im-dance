@@ -21,7 +21,7 @@ function Dancer(top, left, timeBetweenSteps) {
   this.$node = createDancerElement();
 
   // this.step();
-  Dancer.prototype.step();
+  this.step();
   Dancer.prototype.setPosition.bind(this)(top, left);
 }
 

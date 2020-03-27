@@ -9,15 +9,15 @@ function BlinkyDancer() {
   Dancer.apply(this, arguments);
   // console.log("블링키 생성자");
 }
-BlinkyDancer.prototype = Object.create(Dancer.prototype);
-BlinkyDancer.prototype.consturctor = BlinkyDancer;
 
 BlinkyDancer.prototype.step = function() {
-  // console.log("step");
   Dancer.prototype.step();
-  var style = this.$node.style;
+  // console.log("블링키 스텝");
+  let style = this.$node.style;
   style.display = style.display === "none" ? "inline-block" : "none";
 };
+BlinkyDancer.prototype = Object.create(Dancer.prototype);
+BlinkyDancer.prototype.consturctor = BlinkyDancer;
 
 //console.log(BlinkyDancer.setPosition(7, 10));
 // let testDancer = new BlinkyDancer();
