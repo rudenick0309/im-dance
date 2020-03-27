@@ -37,7 +37,7 @@ a:active {
 .dancer {
   width: 100px;
   height: 100px;
-  /* background-color: red; */
+  background-color: red;
   /* font-size: 20px; */
   left: 0px;
   top: 0px;
@@ -51,12 +51,13 @@ a:active {
   transition-duration: 0.5s;
   transition-delay: 0.5s;
   transition-timing-function: linear;
+  transform: rotate(270deg);
 }
 
 .dancer2 {
   width: 50px;
   height: 50px;
-  /* background-color: blue; */
+  background-color: blue;
   /* color: yellow; */
   /* font-size: 18px; */
   left: 150px;
