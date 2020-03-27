@@ -19,25 +19,23 @@ function Dancer(top, left, timeBetweenSteps) {
   this.left = left;
   this.timeBetweenSteps = timeBetweenSteps;
   this.$node = createDancerElement();
+
+  // this.step();
+  Dancer.prototype.step();
+  Dancer.prototype.setPosition.bind(this)(top, left);
 }
 
 Dancer.prototype.step = function() {
-  setTimeout(this.dancers.step, this.timeBetweenSteps);
+  setTimeout(this.step, this.timeBetweenSteps);
 };
 
 Dancer.prototype.setPosition = function(top, left) {
-  // console.log('Dancer의 this : ' + this.$node);
   Object.assign(this.$node.style, {
     top: `${top}px`,
     left: `${left}px`
   });
 };
 
-//console.log('Dancer: ' + Dancer.prototype.setPosition(7, 10));
-
-// Dancer.prototype.setPosition
-
-// you don't have to worry about this code. this is for testing.
 if (typeof window === 'undefined') {
   module.exports = Dancer;
 }
