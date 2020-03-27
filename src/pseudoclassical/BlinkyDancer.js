@@ -1,5 +1,5 @@
-if (typeof window === "undefined") {
-  var Dancer = require("./Dancer");
+if (typeof window === 'undefined') {
+  var Dancer = require('./Dancer');
 } // you don't have to worry about this code. this is for testing.
 
 // blinkyDancer를 pseudoclassical한 방식으로 리팩토링하세요
@@ -10,20 +10,20 @@ function BlinkyDancer() {
   // console.log("블링키 생성자");
 }
 
-BlinkyDancer.prototype.step = function() {
-  Dancer.prototype.step();
-  // console.log("블링키 스텝");
-  let style = this.$node.style;
-  style.display = style.display === "none" ? "inline-block" : "none";
-};
 BlinkyDancer.prototype = Object.create(Dancer.prototype);
 BlinkyDancer.prototype.consturctor = BlinkyDancer;
+
+BlinkyDancer.prototype.step = function() {
+  Dancer.prototype.step.bind(this)();
+  let style = this.$node.style;
+  style.display = style.display === 'none' ? 'inline-block' : 'none';
+};
 
 //console.log(BlinkyDancer.setPosition(7, 10));
 // let testDancer = new BlinkyDancer();
 // console.log(testDancer.setPosition(7, 10));
 
 // you don't have to worry about this code. this is for testing.
-if (typeof window === "undefined") {
+if (typeof window === 'undefined') {
   module.exports = BlinkyDancer;
 }
