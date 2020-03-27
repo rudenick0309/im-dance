@@ -1,7 +1,7 @@
-if (typeof window === "undefined") {
-  var jsdom = require("jsdom");
+if (typeof window === 'undefined') {
+  var jsdom = require('jsdom');
   var { JSDOM } = jsdom;
-  var { document } = new JSDOM("").window;
+  var { document } = new JSDOM('').window;
 } // you don't have to worry about this code. this is for testing.
 
 // dancer를 class 키워드를 써서 ES6 방식으로 리팩토링하세요
@@ -11,8 +11,11 @@ class DancerClass {
 
   constructor(top, left, timeBetweenSteps) {
     const createDancerElement = () => {
-      let elDancer = document.createElement("span");
-      elDancer.className = "dancer";
+      let elDancer = document.createElement('span');
+      elDancer.className = 'dancer';
+      elDancer.addEventListener('click', function() {
+        alert('클릭되었습니다');
+      });
       // elDancer.style.transition = "translateX(120px)";
       return elDancer;
     };
@@ -38,6 +41,6 @@ class DancerClass {
 }
 
 // you don't have to worry about this code. this is for testing.
-if (typeof window === "undefined") {
+if (typeof window === 'undefined') {
   module.exports = DancerClass;
 }

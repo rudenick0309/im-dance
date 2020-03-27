@@ -6,6 +6,10 @@ body {
   margin: 0px;
   background-color: #444;
   font-size: 18px;
+  background-image: url('wood.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
 body,
 a:link,
@@ -37,16 +41,27 @@ a:active {
 .dancer {
   width: 100px;
   height: 100px;
-  /* background-color: red; */
+  background-color: red;
+  border-radius: 10px;
   /* font-size: 20px; */
   left: 0px;
   top: 0px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top
-    color;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-delay: 0.5s;
-  -webkit-transition-timing-function: linear;
+  transition-property: width height background-color font-size left top color;
+  transition-duration: 0.5s;
+  transition-delay: 0.5s;
+  transition-timing-function: linear;
+  transform: rotate(120deg);
+}
+
+.rectangluar {
+  width: 100px;
+  height: 100px;
+  background-color: ivory;
+  border-radius: 40%;
+  left: 0px;
+  top: 0px;
+  position: absolute;
   transition-property: width height background-color font-size left top color;
   transition-duration: 0.5s;
   transition-delay: 0.5s;
@@ -56,17 +71,12 @@ a:active {
 .dancer2 {
   width: 50px;
   height: 50px;
-  /* background-color: blue; */
+  background-color: blue;
   /* color: yellow; */
   /* font-size: 18px; */
   left: 150px;
   top: 25px;
   position: absolute;
-  -webkit-transition-property: width height background-color font-size left top
-    color;
-  -webkit-transition-duration: 0.5s;
-  -webkit-transition-delay: 0.5s;
-  -webkit-transition-timing-function: linear;
   transition-property: width height background-color font-size left top color;
   transition-duration: 0.5s;
   transition-delay: 0.5s;
